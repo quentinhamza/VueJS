@@ -1,20 +1,18 @@
 <template>
-    <label for="{{name}}"> {{label}} </label>
-    <textarea name="{{name}}" id="{{name}}" cols="30" rows="10"></textarea>
+  <label v-bind:for="name">{{label}}</label>
+  <input type="date" v-bind:id="name" />
 </template>
 
 <script>
 export default {
-  name: 'RadioBtn',
+  name: 'DateBtn',
   props: {
     name: String,
-    label: String,
-    
+    label: String
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>
