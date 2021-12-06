@@ -3,27 +3,34 @@
     <h1 :style="{color:colorie}">Coucou</h1>
   </div>
   <Title title="Formulaire de Contact"/>
-    <div>
-      <TextInput name="name" label="Prénom"/>
-      <TextInput name="lastname" label="Nom"/>
+    <div v-if="step === 'step 1'">
+      <div>
+        <TextInput name="name" label="Prénom"/>
+        <TextInput name="lastname" label="Nom"/>
+      </div>
+      <div>
+        <DateInput name="birthday" label="Date de Naissance"/>
+      </div>
+      <button  v-on:click="step = 'step 2'"> Next step</button>
+
     </div>
-    <div>
-      <DateInput name="birthday" label="Date de Naissance"/>
-    </div>
-    <div>
-      <TextArea :name="message" label="Message"/>
-    </div>
-    <div>
-      <Select :name="Sexe"> 
-      </Select>
-    </div>
-    <div>
-      <Button msg="" v-on:validation="colorie='green'"/>
-    </div>
-    <div>
-      <BtnForm type="submit" text="Envoyer"/>
-      <BtnForm type="reset" text="Réinitialiser"/>
-    </div>
+      <div v-if="step === 'step 2'">
+        <TextArea :name="message" label="Message"/>
+        <button  v-on:click="step = 'step 3'"> Next step</button>
+      </div>
+      <div v-if="step === 'step 3'">
+        <Select :name="Sexe"/>
+        {{select}}
+      </div>
+      <div>
+        <Button msg="" v-on:validation="colorie='green'"/>
+      </div>
+      <div>
+        <!--
+        <BtnForm type="submit" text="Envoyer"/>
+        <BtnForm type="reset" text="Réinitialiser"/>
+        -->
+      </div>
    
 
 </template>
@@ -34,12 +41,12 @@ import TextInput from './components/TextInput.vue';
 import DateInput from './components/DateInput.vue';
 import TextArea from './components/TextArea.vue';
 import Select from './components/Select.vue';
-import BtnForm from './components/BtnForm.vue';
 import Button from './components/Button.vue';
 
 export default {
   data () {
     return {
+      step : 'step 1',
       colorie:'red',
     }
   },
@@ -50,7 +57,6 @@ export default {
     DateInput,
     TextArea,
     Select,
-    BtnForm,
     Button,
   }
   
