@@ -1,4 +1,6 @@
 <template>
+<!-- RIP J'AI RIEN COMPRIS AU CODE, JE N'ARRIVE MEME PAS A RETROUVER LES DIFFÉRENTS PRODUITS DANS "COMPONENTS"
+JE VOULAIS PARTIR D'UN CODE STRUCTURÉ ET LE REMODELER A MA SAUCE MAIS BON ....-->
   <div class="container">
     <mainMenu>
       <btn btnColor="btn btn-small btn-info btn-popup"
