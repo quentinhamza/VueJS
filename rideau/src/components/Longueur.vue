@@ -1,10 +1,10 @@
 <template>
 <!-- Nom du label -->
-    <label for="tentacles">Longueur du rail (50-600):</label>
+    <label for="rail">Longueur du rail (50-600):</label>
 
 <!-- Type d'input avec les valeurs min et max -->
     <input type="number" id="longueur" name="ral"
-        min="50" max="=600">
+        min="0" max="200">
 
 </template>
 
@@ -18,13 +18,12 @@ export default {
         // sans avoir besoin de les reporter une par une dans 
         // mon tableau mais je ne sais pas comment faire
         Longueur : [
-            50 - 600
+            0 - 200
         ]
     }
   },
   name: 'Longueur',
   props: {
-    text: String,    
     type: String,
   }
 }

@@ -6,28 +6,30 @@
     <img id="img-rail" src="./assets/tringles-rail.jpg">
   </div>
   <div>
-    <h2>Personnalisez votre produit</h2>
-  </div>
-  <!-- Step pour faire un système d'étape et griser
-  la seconde partie de la personnalisation -->
-  <div v-if="step === 'step 1'">
-    <Longueur name="rail" label="Longueur du rail"/>
-  </div>
-  <div>
-  <!-- go étape 2 -->
-    <button  v-on:click="step = 'step 2'"> Valider</button>
-  </div>
-  <div v-if="step === 'step 2'">
-  
-  </div>
-  <div>
-  <!-- go étape 3 -->
-  <button  v-on:click="step = 'step 3'"> Valider</button>
-  </div>
-  <div v-if="step === 'step 3'">
-  
+    <div>
+      <h2>Personnalisez votre produit</h2>
+    </div>
+    <!-- Step pour faire un système d'étape et griser
+    la seconde partie de la personnalisation -->
+    <div v-if="step === 'step 1'">
+      <Longueur name="rail" label="Longueur du rail"/>
+    </div>
+    <div>
+    <!-- go étape 2 -->
+      <button  v-on:click="step = 'step 2'"> Valider</button>
+    </div>
+    <div v-if="step === 'step 2'">
+    
+    </div>
+    <div>
+    <!-- go étape 3 -->
+    <button  v-on:click="step = 'step 3'"> Valider</button>
+    </div>
+    <div v-if="step === 'step 3'">
+    
   </div>
 
+  </div>
 </div>
   
 </template>
